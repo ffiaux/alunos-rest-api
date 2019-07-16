@@ -1,0 +1,5 @@
+{
+    "require": {
+        "palepurple/rate-limit": "^2.0"
+    }
+}

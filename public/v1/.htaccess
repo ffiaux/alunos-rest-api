@@ -1,0 +1,29 @@
+RewriteEngine On # Turn on the rewriting engine
+
+# aluno e suas notas
+RewriteRule ^alunos/([0-9]+)/notas/?$ notas.php?id=$1 [NC,L]
+
+# aluno e seus enderecos
+RewriteRule ^alunos/([0-9]+)/enderecos/?$ enderecos_aluno.php?id=$1 [NC,L]
+
+# aluno e seus telefones
+RewriteRule ^alunos/([0-9]+)/telefones/?$ telefones_aluno.php?id=$1 [NC,L]
+
+# alunos
+RewriteRule ^alunos/?$ alunos.php [NC,L]
+RewriteRule ^alunos/([0-9]+)/?$ alunos.php?id=$1 [NC,L]
+
+# enderecos
+RewriteRule ^enderecos/?$ enderecos.php [NC,L]
+RewriteRule ^enderecos/([0-9]+)/?$ enderecos.php?id=$1 [NC,L]
+
+# telefones
+RewriteRule ^telefones/?$ telefones.php [NC,L]
+RewriteRule ^telefones/([0-9]+)/?$ telefones.php?id=$1 [NC,L]
+
+# turmas
+RewriteRule ^turmas/?$ turmas.php [NC,L]
+RewriteRule ^turmas/([0-9]+)/?$ turmas.php?id=$1 [NC,L]
+
+# turmas e seus alunos
+RewriteRule ^turmas/([0-9]+)/alunos/?$ turmas_alunos.php?id=$1 [NC,L]
